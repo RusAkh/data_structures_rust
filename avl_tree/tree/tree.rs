@@ -23,6 +23,7 @@ fn build_tree(arr: &Vec<i64>, i: usize, n: usize) -> Option<*mut Node> {
     Some(root)
 }
 
+// Builds full tree with balances and heights set
 pub fn build_full_tree(arr: Vec<i64>) -> Option<*mut Node> {
     let n = arr.len();
     let root = build_tree(&arr, 0, n);
