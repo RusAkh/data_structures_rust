@@ -1,4 +1,4 @@
-use crate::height::setHeights;
+use crate::height::set_heights;
 
 // use crate::height::height::setHeights;
 
@@ -27,7 +27,7 @@ fn build_tree(arr: &Vec<i64>, i: usize, n: usize) -> Option<*mut Node> {
 pub fn build_full_tree(arr: Vec<i64>) -> Option<*mut Node> {
     let n = arr.len();
     let root = build_tree(&arr, 0, n);
-    setHeights(root);
+    set_heights(root);
     unimplemented!()
 }
     

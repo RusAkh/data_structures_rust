@@ -1,8 +1,7 @@
-use core::num;
 use std::cmp;
 use crate::node::Node;
 
-pub fn setHeights(root: Option<*mut Node>) -> i64 {
+pub fn set_heights(root: Option<*mut Node>) -> i64 {
     match root {
         None => -1,
         Some(node) => {
@@ -10,7 +9,7 @@ pub fn setHeights(root: Option<*mut Node>) -> i64 {
                 return 0
             } else {
                 unsafe {
-                    (*node).height = cmp::max(setHeights((*node).left ) , setHeights((*node).right));
+                    (*node).height = cmp::max(set_heights((*node).left ) , set_heights((*node).right));
                 }
                 return unsafe { (*node).height }
             }
