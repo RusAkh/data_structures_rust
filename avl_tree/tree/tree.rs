@@ -27,7 +27,12 @@ fn build_tree(arr: &Vec<i64>, i: usize, n: usize) -> Option<*mut Node> {
 pub fn build_full_tree(arr: Vec<i64>) -> Option<*mut Node> {
     let n = arr.len();
     let root = build_tree(&arr, 0, n);
-    set_heights(root);
-    unimplemented!()
+    if let None = root {
+        return None;
+    } 
+    
+
+    // set_heights(root);
+    root
 }
     
